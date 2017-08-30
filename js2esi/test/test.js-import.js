@@ -4,10 +4,10 @@
 
 require( './moddir/str2int.js' );
 
-//### import a second time (no force)
+//@esi-comment import a second time (no force)
 require( './moddir/str2int.js' );
 
-//### import a third time, this time forced
+//@esi-comment import a third time, this time forced
 require( './moddir/str2int.js', force=true );
 
 str = '919';

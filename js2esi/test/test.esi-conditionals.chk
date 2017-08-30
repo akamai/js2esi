@@ -16,7 +16,7 @@
       symbolMatch = 'true';
     if ( QUERY_STRING['q'] == '1' )
     {
-      //### two assigns here...
+      //@esi-comment two assigns here...
       qsMatch  = 'true';
       qsMatch2 = 'good';
     }
@@ -24,11 +24,11 @@
     {}
     else if ( QUERY_STRING['q'] == '3' )
     {
-      //### the last match's block should have been empty...
+      //@esi-comment the last match's block should have been empty...
     }
     else
     {
-      //### one assign here...
+      //@esi-comment one assign here...
       qsMatch = 'false';
     }
     try
@@ -38,7 +38,7 @@
       innerExcept = 'true';
       try
       {
-        //### $execute_and_fail_silently()
+        //@esi-comment $execute_and_fail_silently()
       }
     }
   }

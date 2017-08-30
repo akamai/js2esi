@@ -10,7 +10,7 @@
       innerExcept = 'true';
       try
       {
-        //### $execute_and_fail_silently()
+        //@esi-comment $execute_and_fail_silently()
       }
     }
   }

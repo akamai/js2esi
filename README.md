@@ -141,7 +141,7 @@ js input:
  * stripped out completely, with the exception of a comment that begins
  * with a triple hash, which will be converted into an ESI comment, eg.
  */
-//### this ESI code is generated -- do not edit manually
+//@esi-comment this ESI code is generated -- do not edit manually
 // the above will appear in the output, but nothing else
 ```
 
@@ -570,6 +570,8 @@ Some things that are not yet supported, but eventually will be:
 * `<esi:remove> ... </esi:remove>`
 * `<esi:text> ... </esi:text>`
 * `<!--esi ... -->`
+
+* add support for @esi-comment decorator in long comment blocks
 
 * add support for `'''` string types in ESI... eg:
     `<esi:when test="$(stream_content) matches '''\.wmv$'''">`

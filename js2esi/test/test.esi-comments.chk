@@ -1,6 +1,6 @@
 {
-  //### this is a single line comment
+  //@esi-comment this is a single line comment
   //
-  //### multiline comments
-  //### are good, too!
+  //@esi-comment multiline comments
+  //@esi-comment are good, too!
 }

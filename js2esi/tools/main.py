@@ -1,7 +1,3 @@
-__author__ = "Colin Bendell"
-__copyright__ = "Copyright 2017, Akamai Technologies"
-__license__ = "Apache2"
-
 from __future__ import print_function  # this is here for the version check to work on Python 2.
 
 import argparse
@@ -14,11 +10,8 @@ if sys.version_info < (3, 5):
     print("# js2esi only supports Python 3.5 and above! #", file=sys.stderr)
     print("#" * 49, file=sys.stderr)
 
-import re  # noqa
 import errno  # noqa
-import pkg_resources  # noqa
 import os  # noqa
-import signal  # noqa
 import io  #noqa
 
 from js2esi.tools import util  # noqa
@@ -26,6 +19,10 @@ from ply import lex, yacc   # noqa
 from js2esi.token import ctokens, cparser, dtokens, dparser  # noqa
 from js2esi import node  # noqa
 
+
+__author__ = "Colin Bendell"
+__copyright__ = "Copyright 2017, Akamai Technologies"
+__license__ = "Apache2"
 
 
 class CompilationErrors(Exception):

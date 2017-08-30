@@ -6,13 +6,13 @@
 // no output line
 
 //------------------------------------------------------------------------------
-//### this is a simple ESI comment
+//@esi-comment this is a simple ESI comment
 // should be output as:
 //   <esi:comment text="this is a simple ESI comment"/>
 
 //------------------------------------------------------------------------------
-//### this should prolly be
-//### a multiline comment
+//@esi-comment this should prolly be
+//@esi-comment a multiline comment
 // should be output as:
 //   <esi:comment text="this should prolly be
 //   a multiline comment"/>

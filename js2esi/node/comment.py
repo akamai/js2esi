@@ -24,7 +24,7 @@ class Comment(Statement):
         if fc is not None and fc != self:
             ctxt.write(ctxt.indent + '//\n')
         # TODO: do some escaping?...
-        ctxt.write(ctxt.indent + '//### ')
-        ctxt.write(('\n%s//### ' % ctxt.indent).join(self.message.split('\n')))
+        ctxt.write(ctxt.indent + '//@esi-comment ')
+        ctxt.write(('\n%s//@esi-comment ' % ctxt.indent).join(self.message.split('\n')))
         ctxt.write('\n')
         return self

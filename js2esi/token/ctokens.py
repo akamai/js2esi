@@ -247,8 +247,8 @@ def t_newline(t):
 
 # ESI comments (ie. comments that should stay in the output)
 def t_ESICOMMENT(t):
-    r'\/\/\#\#\#.*'
-    t.value = t.value[5:]
+    r'//@esi-comment.*'
+    t.value = t.value[15:]
     t.lexer.push_state('multicomment')
     t.lexer.mclast = t.lexer.lexpos
     return t
@@ -277,8 +277,8 @@ def t_error(t):
 # special state: 'multicomment' (continuation of multi-line esi comments)
 
 def t_multicomment_ESICOMMENT_CONT(t):
-    r'\/\/\#\#\#.*'
-    t.value = t.value[5:]
+    r'//@esi-comment.*'
+    t.value = t.value[15:]
     t.lexer.mclast = t.lexer.lexpos
     return t
 

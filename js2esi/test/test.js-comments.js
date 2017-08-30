@@ -5,6 +5,6 @@
 // no output line
 
 // Legacy comment line (TODO: remove support)
-//### this is a simple ESI comment
+//@esi-comment this is a simple ESI comment
 // should be output as:
 //   <esi:comment text="this is a simple ESI comment"/>
