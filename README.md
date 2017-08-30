@@ -137,9 +137,9 @@ js2esi supports one nifty thing that ESI does not: inlining either external or i
 js input:
 
 ```
-/** anything after a hash symbol ('#') will be regarded as a comment and
- * stripped out completely, with the exception of a comment that begins
- * with a triple hash, which will be converted into an ESI comment, eg.
+/** anything after a long or short comment will be regarded as a comment and
+ * stripped out completely, with the exception of a comment that uses the @esi-comment 
+ * descriptor, which will be converted into an ESI comment, eg:
  */
 //@esi-comment this ESI code is generated -- do not edit manually
 // the above will appear in the output, but nothing else
