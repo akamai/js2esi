@@ -1,0 +1,20 @@
+<esi:assign name="path" value="$(REQUEST_PATH)"
+/><esi:try
+ ><esi:attempt
+  ><esi:assign name="outerTry" value="'true'"
+  /><esi:try
+   ><esi:attempt
+    ><esi:assign name="innerTry" value="'true'"
+   /></esi:attempt
+   ><esi:except
+    ><esi:assign name="innerExcept" value="'true'"
+    /><esi:try
+     ><esi:attempt><esi:comment text="$execute_and_fail_silently()"/></esi:attempt
+    ></esi:try
+   ></esi:except
+  ></esi:try
+ ></esi:attempt
+ ><esi:except
+  ><esi:assign name="outerExcept" value="'true'"
+ /></esi:except
+></esi:try>

@@ -1,0 +1,14 @@
+{
+  print('<html>\n');
+  printraw('<esi:vars>');
+  print('\n');
+  v = 'foo';
+  print('\n');
+  if ( v == 'foo' )
+    print('\n <body>\n  <h1>Enter the FOO!</h1>\n </body>\n');
+  else
+    print('\n <body>\n  <h1>No FOO!</h1>\n </body>\n');
+  print('\n');
+  printraw('</esi:vars>');
+  print('\n</html>\n');
+}

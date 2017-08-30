@@ -1,0 +1,15 @@
+{
+  varExprBinaryOp1 = varString + 15;
+  varExprBinaryOp2 = varString + 15;
+  varExprBinaryOp3 = varString + 15;
+  varExprBinaryOp4 = varString + 15;
+  varExprBinaryOp5 = varString + 15;
+  varFuncCall1     = decode_hex();
+  varFuncCall2     = decode_hex('a30a0d');
+  varFuncCall3     = decode_hex(varString);
+  varFuncCall4     = func_no_param();
+  varFuncCall5     = func_three_params(ARGS[0], 15, 'bingo');
+  varArrays[4]     = varString['foo'] + 'blue';
+  varArrays[5]     = varString['foo'] + 'blue';
+  plusCollapse     = 14 + varString['foo'] + 'blue';
+}

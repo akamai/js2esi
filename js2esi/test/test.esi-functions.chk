@@ -1,0 +1,11 @@
+{
+  function factorial()
+  {
+    var0 = ARGS[0];
+    if ( var0 <= 1 )
+      return 1;
+    return var0 * factorial(var0 - 1);
+  }
+  function posfactorial()
+    return ARGS[0] * factorial(ARGS[0] - 1);
+}

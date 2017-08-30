@@ -1,0 +1,4 @@
+{
+  print('<!-- no-vars xmlcomment -->');
+  printv('<!-- vars xmlcomment with param ' + returnval + ' -->');
+}

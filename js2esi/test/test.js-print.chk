@@ -1,0 +1,11 @@
+<esi:assign name="path" value="$(REQUEST_PATH)"/><esi:assign name="spath" value="$string_split($(path),'/',2)"/><esi:assign name="tid" value="$(spath{1})"/><esi:assign name="fpath" value="$substr($(spath{2}),0,$len($(spath{2}))-4)+'.wmv'"/><esi:vars><?wsx version="1.0"?>
+<smil>
+  <media src="/7/456/43766/v0001/vodvcast.download.akamai.com/43813/test/$(fpath)?tid=$(tid)"/>
+</smil>
+</esi:vars><esi:choose><esi:when test="!$exists($(thisVar))">variable thisVar does NOT exist.
+<esi:vars>$(varName{'key name'})</esi:vars></esi:when></esi:choose><esi:vars>dollars \$ and dangerous chars, such as "<"</esi:vars><esi:vars>just make var printing easy: "$(spath)"
+</esi:vars><esi:vars>testing slash escaping: \\ (<-- one slash + ESI escaping = two slashes)
+
+^-- empty line
+
+</esi:vars>

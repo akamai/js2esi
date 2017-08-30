@@ -1,0 +1,4 @@
+<esi:assign name="varString" value="'this String is doogy'"
+/><esi:assign name="varStringMultiline">'this String is
+multiline'</esi:assign><esi:assign name="varNumber" value="15"
+/>

@@ -19,6 +19,7 @@ lib/
 lib64/
 parts/
 sdist/
+dist/
 var/
 wheels/
 *.egg-info/
@@ -99,3 +100,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# editor
+.idea

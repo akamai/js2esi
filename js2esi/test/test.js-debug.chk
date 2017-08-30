@@ -1,0 +1,1 @@
+<esi:assign name="varString" value="'this String is doogy'"/><esi:try><esi:attempt><esi:assign name="inTry" value="'true'"/></esi:attempt><esi:except><esi:assign name="inExcept" value="'true'"/></esi:except></esi:try><esi:debug/>

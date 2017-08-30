@@ -1,0 +1,1 @@
+<esi:choose><esi:when test="(!$func1())&&$func2()"><esi:assign name="str" value="'first'"/></esi:when><esi:when test="!($func1()&&$func2())"><esi:assign name="str" value="'second'"/></esi:when></esi:choose>

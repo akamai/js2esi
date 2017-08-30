@@ -1,0 +1,4 @@
+{
+  varString += 'this String is doogy';
+  varInt    *= 15;
+}

@@ -1,0 +1,3 @@
+<esi:assign name="varString" value="$(varString)+'this String is doogy'"
+/><esi:assign name="varInt" value="$(varInt)*15"
+/>

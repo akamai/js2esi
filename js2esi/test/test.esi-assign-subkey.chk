@@ -1,0 +1,5 @@
+{
+  varString['foo']     = 'this String is doogy';
+  varNumber[15]        = 15;
+  varNumber['fifteen'] = 15;
+}

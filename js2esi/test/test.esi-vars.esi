@@ -1,0 +1,13 @@
+<esi:vars name="varName"
+/><esi:vars>$(varName)</esi:vars
+><esi:vars name="varName{key}"
+/><esi:vars>$(varName{key})</esi:vars
+><esi:vars name="varName{'key'}"
+/><esi:vars name="varName{'key name'}"
+/><esi:vars>$(varName{'key name'})</esi:vars
+><esi:vars name="varName{12}"
+/><esi:vars>$add_header('Pragma','no-cache')</esi:vars
+><esi:vars>the length of "$(varName)" is $len($(varName)).</esi:vars
+><esi:vars>dollars: \$, dquotes: ", squotes: '</esi:vars
+><esi:vars>dollars: $dollar(), dquotes: $dquote(), squotes: $squote()</esi:vars
+>

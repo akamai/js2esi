@@ -1,0 +1,5 @@
+{
+  varString          = 'this String is doogy';
+  varStringMultiline = 'this String is\nmultiline';
+  varNumber          = 15;
+}

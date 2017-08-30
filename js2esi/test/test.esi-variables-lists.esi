@@ -1,0 +1,5 @@
+<esi:assign name="varArray{8}" value="'ninth element'"
+/><esi:assign name="varArray{8}" value="ninthElement"
+/><esi:assign name="varArrayAll" value="['foo','bar',16,[0,5,2],$(varArray{8})]"
+/><esi:assign name="mtArray1" value="  [   ] "
+/>

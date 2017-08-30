@@ -1,0 +1,17 @@
+<html>
+<esi:vars>
+<esi:assign name="v" value="'foo'"/>
+<esi:choose>
+<esi:when test="$(v)=='foo'">
+ <body>
+  <h1>Enter the FOO!</h1>
+ </body>
+</esi:when>
+<esi:otherwise>
+ <body>
+  <h1>No FOO!</h1>
+ </body>
+</esi:otherwise>
+</esi:choose>
+</esi:vars>
+</html>

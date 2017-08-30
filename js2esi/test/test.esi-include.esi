@@ -1,0 +1,13 @@
+<esi:assign name="incpath1" value="$(REQUEST_PATH)"
+/><esi:assign name="incpath2" value="'http://example.com/path/to/component.html'"
+/><esi:assign name="evalpath" value="'http://example.com/path/to/file.esi'"
+/><esi:eval src="$(evalpath)?someparam=foo" dca="'akamaizer->esi'"
+/><esi:try
+ ><esi:attempt
+  ><esi:include src="http://redirect.com/$(incpath1)" dca="none" onerror="continue" ttl="4h" no-store="on" method="GET" setheader="Cookie: x=y"
+  /><esi:include src="http://redirect.com/$(incpath1)" setheader="Cookie: x=y" setheader="Cookie: a=b"
+ /></esi:attempt
+ ><esi:except
+  ><esi:include src="$(incpath2)" maxwait="100"
+ /></esi:except
+></esi:try>

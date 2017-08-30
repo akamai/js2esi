@@ -1,0 +1,1 @@
+<esi:vars>kn: "$(varName{'key name'})".</esi:vars><esi:vars>kn: "$(varName{$(key)+$(name)})".</esi:vars>

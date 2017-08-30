@@ -1,0 +1,8 @@
+{
+  title = 'Manual | js | Akamai';
+  print('<html xmlns="http://www.w3.org/1999/xhtml">\n <head>\n  <title>');
+  printv(title);
+  print('</title>\n </head>\n <body>\n  <h1>ESI Syntax Sucks</h1>\n  <h2>js Helps Out</h2>\n  <div>\n   Your User-Agent: ');
+  printv(HTTP_USER_AGENT);
+  print('\n  </div>\n </body>\n</html>\n');
+}

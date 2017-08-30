@@ -1,0 +1,3 @@
+<esi:vars>$(varName)
+this is on a line by itself
+</esi:vars>

@@ -1,0 +1,63 @@
+<esi:vars>
+<esi:assign name="stream_file">
+$url_decode($(stream_file))
+</esi:assign>
+<esi:assign name="stream_content">
+$url_decode($(stream_content))
+</esi:assign>
+<esi:assign name="stream_file_bkup">
+$url_decode($(stream_file_bkup))
+</esi:assign>
+<esi:choose>
+<esi:when test="$(QUERY_STRING)">
+<esi:choose>
+<esi:when test="$(stream_content) matches '''\.wmv$'''">$add_header('Content-Type','video/x-ms-wmv')</esi:when>
+<esi:otherwise>$add_header('Content-Type', 'video/x-ms-asf')</esi:otherwise></esi:choose>
+<esi:assign name="stream_file">$stream_rewrite_ext($(stream_content), $(stream_override_ext))</esi:assign>
+<esi:assign name="stream_file_bkup">
+$stream_rewrite_ext($(stream_content), $(stream_override_ext), $(stream_bkup))
+</esi:assign><ASX VERSION="3.0">
+<esi:choose>
+<esi:when test="$(stream_override_ext)=='live'"> <ENTRY>
+  <REF HREF="mms://$stream_get_hostname($(stream_file), $(stream_cpcode), $(stream_prop), 'm', 1)$stream_get_path($(stream_file), $(stream_cpcode), $(stream_obj), 'm', 1)?$(QUERY_STRING)"/>
+ </ENTRY>
+<esi:choose>
+<esi:when test="$(stream_file)!=$(stream_file_bkup)"><ENTRY>
+  <REF HREF="mms://$stream_get_hostname($(stream_file_bkup), $(stream_cpcode), $(stream_prop), 'm', 1)$stream_get_path($(stream_file_bkup), $(stream_cpcode), $(stream_obj), 'm', 1)?$(QUERY_STRING)" />
+ </ENTRY>
+</esi:when>
+</esi:choose>
+</esi:when>
+<esi:otherwise> <ENTRY>
+  <REF HREF="mms://$stream_get_hostname($(stream_file), $(stream_cpcode), $(stream_prop), 'm', 0)$stream_get_path($(stream_file), $(stream_cpcode), $(stream_obj), 'm', 0)?$(QUERY_STRING)" />
+ </ENTRY>
+</esi:otherwise>
+</esi:choose></ASX>
+</esi:when>
+<esi:otherwise>
+<esi:choose>
+<esi:when test="$(stream_content) matches '''\.wmv$'''">$add_header('Content-Type','video/x-ms-wmv')</esi:when>
+<esi:otherwise>$add_header('Content-Type', 'video/x-ms-asf')</esi:otherwise></esi:choose>
+<esi:assign name="stream_file">$stream_rewrite_ext($(stream_content), $(stream_override_ext))</esi:assign>
+<esi:assign name="stream_file_bkup">
+$stream_rewrite_ext($(stream_content), $(stream_override_ext), $(stream_bkup))
+</esi:assign><ASX VERSION="3.0">
+<esi:choose>
+<esi:when test="$(stream_override_ext)=='live'"> <ENTRY>
+  <REF HREF="mms://$stream_get_hostname($(stream_file), $(stream_cpcode), $(stream_prop), 'm', 1)$stream_get_path($(stream_file), $(stream_cpcode), $(stream_obj), 'm', 1)" />
+ </ENTRY>
+<esi:choose>
+<esi:when test="$(stream_file)!=$(stream_file_bkup)"><ENTRY>
+  <REF HREF="mms://$stream_get_hostname($(stream_file_bkup), $(stream_cpcode), $(stream_prop), 'm', 1)$stream_get_path($(stream_file_bkup), $(stream_cpcode), $(stream_obj), 'm', 1)" />
+ </ENTRY>
+</esi:when>
+</esi:choose>
+</esi:when>
+<esi:otherwise> <ENTRY>
+  <REF HREF="mms://$stream_get_hostname($(stream_file), $(stream_cpcode), $(stream_prop), 'm', 0)$stream_get_path($(stream_file), $(stream_cpcode), $(stream_obj), 'm', 0)" />
+ </ENTRY>
+</esi:otherwise>
+</esi:choose></ASX>
+</esi:otherwise>
+</esi:choose>
+</esi:vars>

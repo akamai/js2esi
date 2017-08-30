@@ -1,0 +1,3 @@
+<esi:comment text="this is a single line comment"
+/><esi:comment text="multiline comments
+are good, too!"/>

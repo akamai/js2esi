@@ -1,0 +1,5 @@
+<esi:assign name="varString" value="'this String is doogy'"
+/><esi:assign name="varNumber" value="15"
+/><esi:assign name="mtString" value="''"
+/><esi:assign name="endSlash" value="'ends with \\'"
+/>

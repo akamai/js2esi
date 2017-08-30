@@ -1,0 +1,54 @@
+<esi:assign name="path" value="$(REQUEST_PATH)"
+/><esi:try
+ ><esi:attempt
+  ><esi:assign name="outerTry" value="'true'"
+  /><esi:choose
+   ><esi:when test="$(path) == '/path/to/eventual/filename.ext' || $(path) == '/path/other/filename.ext'"
+    ><esi:assign name="pathMatch" value="'true'"
+   /></esi:when
+   ><esi:when test="$(dictName{$(keyName)}) == 'blueMoon'"
+    ><esi:choose
+     ><esi:when test="$(HTTP_HOST) matches '.*\\.example\\.com$'"
+      ><esi:assign name="example" value="'true'"
+     /></esi:when
+     ><esi:otherwise
+      ><esi:assign name="example" value="'false'"
+     /></esi:otherwise
+    ></esi:choose
+   ></esi:when
+   ><esi:when test="$(dictName{$(keyName)}) != blueMoon"
+    ><esi:assign name="symbolMatch" value="'true'"
+   /></esi:when
+  ></esi:choose
+  ><esi:choose
+   ><esi:when test="$(QUERY_STRING{q}) == '1'"
+    ><esi:comment text="two assigns here..."
+    /><esi:assign name="qsMatch" value="'true'"
+    /><esi:assign name="qsMatch2" value="'good'"
+   /></esi:when
+   ><esi:when test="$(QUERY_STRING{q}) == '2'"
+   ></esi:when
+   ><esi:when test="$(QUERY_STRING{q}) == '3'"
+    ><esi:comment text="the last match's block should have been empty..."
+   /></esi:when
+   ><esi:otherwise
+    ><esi:comment text="one assign here..."
+    /><esi:assign name="qsMatch" value="'false'"
+   /></esi:otherwise
+  ></esi:choose
+  ><esi:try
+   ><esi:attempt
+    ><esi:assign name="innerTry" value="'true'"
+   /></esi:attempt
+   ><esi:except
+    ><esi:assign name="innerExcept" value="'true'"
+    /><esi:try
+     ><esi:attempt><esi:comment text="$execute_and_fail_silently()"/></esi:attempt
+    ></esi:try
+   ></esi:except
+  ></esi:try
+ ></esi:attempt
+ ><esi:except
+  ><esi:assign name="outerExcept" value="'true'"
+ /></esi:except
+></esi:try>

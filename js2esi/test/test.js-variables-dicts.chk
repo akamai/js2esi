@@ -1,0 +1,1 @@
+<esi:assign name="varHash{'foo'}" value="'fooeth element'"/><esi:assign name="varHashAll" value="{'foo':10,'bar':{'a':'first','b':'second'},'baz':['biz',28]}"/><esi:assign name="mtHash1" value="{}"/><esi:assign name="mtHash2" value="{}"/>

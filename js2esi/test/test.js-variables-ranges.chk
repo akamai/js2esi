@@ -1,0 +1,1 @@
+<esi:assign name="varRange" value="[1..45]"/><esi:assign name="varMultiRange" value="[0..3,5,7..9]"/><esi:assign name="varInt" value="1"/><esi:assign name="varExprRange" value="[$(varInt)..4]"/>

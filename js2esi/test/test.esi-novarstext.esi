@@ -1,0 +1,13 @@
+<esi:assign name="title" value="'Manual | js | Akamai'"
+/><html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title><esi:vars>$(title)</esi:vars></title>
+ </head>
+ <body>
+  <h1>ESI Syntax Sucks</h1>
+  <h2>js Helps Out</h2>
+  <div>
+   Your User-Agent: <esi:vars>$(HTTP_USER_AGENT)</esi:vars>
+  </div>
+ </body>
+</html>

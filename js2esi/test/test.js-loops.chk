@@ -1,0 +1,4 @@
+<esi:assign name="days" value="[1..31]"/><esi:foreach collection="$(days)" item="day"><esi:assign name="bananas" value="$(day)*3"/>With three bananas per day, on day $(day), we have $(bananas) bananas.
+</esi:foreach><esi:foreach collection="$(days)">Day $(item) - nothing to report.
+</esi:foreach><esi:foreach collection="[1..365]"><esi:choose><esi:when test="$(item)==31"><esi:break/></esi:when></esi:choose>Day $(item) - really, nothing to report.
+</esi:foreach>

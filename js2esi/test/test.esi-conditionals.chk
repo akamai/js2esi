@@ -1,0 +1,47 @@
+{
+  path = REQUEST_PATH;
+  try
+  {
+    outerTry = 'true';
+    if ( (path == '/path/to/eventual/filename.ext') || (path == '/path/other/filename.ext') )
+      pathMatch = 'true';
+    else if ( dictName[keyName] == 'blueMoon' )
+    {
+      if ( HTTP_HOST matches '.*\\.example\\.com$' )
+        example = 'true';
+      else
+        example = 'false';
+    }
+    else if ( dictName[keyName] != 'blueMoon' )
+      symbolMatch = 'true';
+    if ( QUERY_STRING['q'] == '1' )
+    {
+      //### two assigns here...
+      qsMatch  = 'true';
+      qsMatch2 = 'good';
+    }
+    else if ( QUERY_STRING['q'] == '2' )
+    {}
+    else if ( QUERY_STRING['q'] == '3' )
+    {
+      //### the last match's block should have been empty...
+    }
+    else
+    {
+      //### one assign here...
+      qsMatch = 'false';
+    }
+    try
+      innerTry = 'true';
+    catch(e)
+    {
+      innerExcept = 'true';
+      try
+      {
+        //### $execute_and_fail_silently()
+      }
+    }
+  }
+  catch(e)
+    outerExcept = 'true';
+}

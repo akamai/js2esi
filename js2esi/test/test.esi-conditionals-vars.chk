@@ -1,0 +1,5 @@
+{
+  if ( stream_override_ext == 'live' )
+    print(' <ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file, stream_cpcode, stream_prop, 'm', 1) + stream_get_path(stream_file, stream_cpcode, stream_obj, 'm', 1) + '?' + QUERY_STRING + '"/>\n </ENTRY>\n');
+  print('\n');
+}

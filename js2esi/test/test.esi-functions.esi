@@ -1,0 +1,13 @@
+<esi:function name="factorial"
+ ><esi:assign name="var0" value="$(ARGS{0})"
+ /><esi:choose
+  ><esi:when test="$(var0) <= 1"
+   ><esi:return value="1"
+  /></esi:when
+ ></esi:choose
+ ><esi:return value="$(var0) * $factorial($(var0) - 1)"
+/></esi:function
+><esi:function name="posfactorial"
+ ><esi:return value="$(ARGS{0}) * $factorial($(ARGS{0}) - 1)"
+/></esi:function
+>

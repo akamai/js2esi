@@ -1,0 +1,8 @@
+varString = 'this String is doogy';
+try {
+  inTry = 'true';
+}
+catch(e) {
+  inExcept = 'true';
+}
+printraw('<esi:debug/>');

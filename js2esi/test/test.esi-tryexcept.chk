@@ -1,0 +1,19 @@
+{
+  path = REQUEST_PATH;
+  try
+  {
+    outerTry = 'true';
+    try
+      innerTry = 'true';
+    catch(e)
+    {
+      innerExcept = 'true';
+      try
+      {
+        //### $execute_and_fail_silently()
+      }
+    }
+  }
+  catch(e)
+    outerExcept = 'true';
+}

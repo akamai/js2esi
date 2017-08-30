@@ -1,0 +1,5 @@
+{
+  varString = 'this String is doogy';
+  varNumber = 15;
+  varSymbol = 'flyingFlamingos';
+}

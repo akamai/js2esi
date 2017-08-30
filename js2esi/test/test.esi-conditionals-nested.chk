@@ -1,0 +1,19 @@
+{
+  if ( X )
+    y = 87;
+  if ( A )
+  {
+    if ( B )
+      m0 = 'TT';
+    else
+      m0 = 'TF';
+  }
+  s = 1;
+  if ( A )
+  {
+    if ( B )
+      m1 = 'TT';
+  }
+  else
+    m1 = 'F?';
+}

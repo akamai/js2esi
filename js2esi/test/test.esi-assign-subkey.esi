@@ -1,0 +1,4 @@
+<esi:assign name="varString{'foo'}" value="'this String is doogy'"
+/><esi:assign name="varNumber{15}" value="15"
+/><esi:assign name="varNumber{fifteen}" value="15"
+/>

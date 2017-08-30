@@ -1,0 +1,6 @@
+{
+  varString = 'this String is doogy';
+  varNumber = 15;
+  mtString  = '';
+  endSlash  = 'ends with \\';
+}

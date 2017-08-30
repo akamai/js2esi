@@ -1,0 +1,59 @@
+{
+  printraw('<esi:vars>');
+  print('\n');
+  stream_file = url_decode(stream_file);
+  print('\n');
+  stream_content = url_decode(stream_content);
+  print('\n');
+  stream_file_bkup = url_decode(stream_file_bkup);
+  print('\n');
+  if ( QUERY_STRING )
+  {
+    print('\n');
+    if ( stream_content matches '\\.wmv$' )
+      print(add_header('Content-Type', 'video/x-ms-wmv'));
+    else
+      print(add_header('Content-Type', 'video/x-ms-asf'));
+    print('\n');
+    stream_file = stream_rewrite_ext(stream_content, stream_override_ext);
+    print('\n');
+    stream_file_bkup = stream_rewrite_ext(stream_content, stream_override_ext, stream_bkup);
+    print('<ASX VERSION="3.0">\n');
+    if ( stream_override_ext == 'live' )
+    {
+      print(' <ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file, stream_cpcode, stream_prop, 'm', 1) + stream_get_path(stream_file, stream_cpcode, stream_obj, 'm', 1) + '?' + QUERY_STRING + '"/>\n </ENTRY>\n');
+      if ( stream_file != stream_file_bkup )
+        print('<ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file_bkup, stream_cpcode, stream_prop, 'm', 1) + stream_get_path(stream_file_bkup, stream_cpcode, stream_obj, 'm', 1) + '?' + QUERY_STRING + '" />\n </ENTRY>\n');
+      print('\n');
+    }
+    else
+      print(' <ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file, stream_cpcode, stream_prop, 'm', 0) + stream_get_path(stream_file, stream_cpcode, stream_obj, 'm', 0) + '?' + QUERY_STRING + '" />\n </ENTRY>\n');
+    print('</ASX>\n');
+  }
+  else
+  {
+    print('\n');
+    if ( stream_content matches '\\.wmv$' )
+      print(add_header('Content-Type', 'video/x-ms-wmv'));
+    else
+      print(add_header('Content-Type', 'video/x-ms-asf'));
+    print('\n');
+    stream_file = stream_rewrite_ext(stream_content, stream_override_ext);
+    print('\n');
+    stream_file_bkup = stream_rewrite_ext(stream_content, stream_override_ext, stream_bkup);
+    print('<ASX VERSION="3.0">\n');
+    if ( stream_override_ext == 'live' )
+    {
+      print(' <ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file, stream_cpcode, stream_prop, 'm', 1) + stream_get_path(stream_file, stream_cpcode, stream_obj, 'm', 1) + '" />\n </ENTRY>\n');
+      if ( stream_file != stream_file_bkup )
+        print('<ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file_bkup, stream_cpcode, stream_prop, 'm', 1) + stream_get_path(stream_file_bkup, stream_cpcode, stream_obj, 'm', 1) + '" />\n </ENTRY>\n');
+      print('\n');
+    }
+    else
+      print(' <ENTRY>\n  <REF HREF="mms://' + stream_get_hostname(stream_file, stream_cpcode, stream_prop, 'm', 0) + stream_get_path(stream_file, stream_cpcode, stream_obj, 'm', 0) + '" />\n </ENTRY>\n');
+    print('</ASX>\n');
+  }
+  print('\n');
+  printraw('</esi:vars>');
+  print('\n');
+}

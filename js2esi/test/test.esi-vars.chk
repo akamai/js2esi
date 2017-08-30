@@ -1,0 +1,14 @@
+{
+  printv(varName);
+  printv(varName);
+  printv(varName['key']);
+  printv(varName['key']);
+  printv(varName['key']);
+  printv(varName['key name']);
+  printv(varName['key name']);
+  printv(varName[12]);
+  printv(add_header('Pragma', 'no-cache'));
+  printv('the length of "' + varName + '" is ' + len(varName) + '.');
+  printv('dollars: $, dquotes: ", squotes: \'');
+  printv('dollars: $, dquotes: ", squotes: \'');
+}
