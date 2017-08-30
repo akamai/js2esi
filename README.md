@@ -83,7 +83,7 @@ $ js2esi -w sample.js
 <esi:assign name="myvar" value="$len('http://')+$len($(HTTP_HOST))+$len($(REQUEST_PATH))"/>
 ```
 
-## Javascript 'like' language
+## Javascript 'lite' language
 
 The lexical parser is intended to be javascript compatible. However, it isn't very sophisticaed because of some of the underlying limitations of ESI. 
 
