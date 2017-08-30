@@ -72,15 +72,6 @@ The js2esi program is sensitive to the following environmental variables:
 
 `JSLIB` This is a colon (":") delimited list of path names, similar to $PATH, that will be used to find any external js source referenced by import statements.
 
-### Installation
-
-The js2esi program and library are distributed as python eggs. To install the egg, you first need to install Python (3.5 or later) and setuptools (0.6 or later) — note that on most Unix systems, these will already be installed. Once they are, the program "easy_install" will be available at your prompt, and — as the name implies — all you need to do to install js2esi is:
-
-```sh
-$ git clone 
-$ ./dev.sh
-```
-
 ### Example
 
 ```sh
@@ -285,13 +276,13 @@ function squared(value) {
   return multiply(value, value);
 }
 
-# js will actually be able to expand the following to a literal result:
+// js will actually be able to expand the following to a literal result:
 four = squared(2);
 
-# but not in the following situation (a later improvement to js may):
+// but not in the following situation (a later improvement to js may):
 sixteen = squared(multiply(four, 1));
 
-# another example
+// another example
 slen = multiply(len(sixteen), 2);
 ```
 
